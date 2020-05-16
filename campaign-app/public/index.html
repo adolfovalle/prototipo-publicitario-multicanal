@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+
+<body>
+
+    PROTOTIPO
+    OBTENIENDO TOKEN...
+
+    <form action="http://localhost:4000/users" method="get">
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-messaging.js"></script>
+
+    <script>
+// Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "REPLACE_API_KEY",
+    authDomain: "prototipo-52ab7.firebaseapp.com",
+    databaseURL: "https://prototipo-52ab7.firebaseio.com",
+    projectId: "prototipo-52ab7",
+    storageBucket: "prototipo-52ab7.appspot.com",
+    messagingSenderId: "742503728153",
+    appId: "1:742503728153:web:e22f5f1e3952b6bc295688",
+    measurementId: "G-FE5VTRWKHG"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();</script>
+
+    <script src="public/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+    
+   $( document ).ready(function() {
+
+    $.ajax({
+        url: 'http://localhost:4000/users',
+        type: 'GET',
+        success: function(respuesta) {
+            console.log(respuesta.name);
+        },
+        error: function() {
+            console.error("No es posible completar la operación");
+        }
+    });
+
+});
+
+    </script>
+
+</body>
+
+</html>
