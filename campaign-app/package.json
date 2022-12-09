@@ -19,7 +19,7 @@
     "axios": "^0.19.2",
     "body-parser": "^1.18.2",
     "date-and-time": "^0.13.1",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "express-static": "^1.2.5",
     "fcm-node": "^1.5.2",
     "firebase": "^7.9.1",
